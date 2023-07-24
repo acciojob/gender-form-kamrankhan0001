@@ -36,7 +36,7 @@ const App = () => {
 
   return (
     <div onChange={handleGenderChange}>
-      <h1>Select your gender</h1>
+      <h2>Select your gender</h2>
       <input type="radio" value="Male" name="gender" /> Male
         <input type="radio" value="Female" name="gender" /> Female
 
