@@ -45,7 +45,7 @@ const App = () => {
               <label> Female</label>
       {gender === "Male" && (
         <div>
-          <h1>Select your shirt Size:</h1>
+          <h2>Select your shirt Size:</h2>
             
             <select value={shirtSize} onChange={handleShirtSizeChange}>
               <option value="">Select size</option>
@@ -59,12 +59,12 @@ const App = () => {
 
       {gender === "Female" && (
         <div>
-           <h1>Select your dress Size:</h1>
+           <h2>Select your dress Size:</h2>
             <select value={dressSize} onChange={handleDressSizeChange}>
               <option value="">Select size</option>
-              <option value="2">2</option>
-              <option value="4">4</option>
-              <option value="6">6</option>
+              <option value="1">2</option>
+              <option value="2">4</option>
+              <option value="3">6</option>
               
             </select>
         
