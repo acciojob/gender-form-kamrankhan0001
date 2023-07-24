@@ -62,9 +62,9 @@ const App = () => {
            <h2>Select your dress size:</h2>
             <select value={dressSize} onChange={handleDressSizeChange}>
               <option value="">Select size</option>
-              <option value="1">2</option>
-              <option value="2">4</option>
-              <option value="3">6</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
               
             </select>
         
