@@ -1,13 +1,77 @@
 
-import React from "react";
-import './../styles/App.css';
+// import React from "react";
+// import './../styles/App.css';
+
+// const App = () => {
+//   return (
+//     <div>
+//         {/* Do not remove the main div */}
+//     </div>
+//   )
+// }
+
+// export default App
+import React, { useState } from "react";
+ import './../styles/App.css';
 
 const App = () => {
-  return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
-  )
-}
+  const [gender, setGender] = useState("");
+  const [shirtSize, setShirtSize] = useState("");
+  const [dressSize, setDressSize] = useState("");
 
-export default App
+  const handleGenderChange = (event) => {
+    const selectedGender = event.target.value;
+    setGender(selectedGender);
+  };
+
+  const handleShirtSizeChange = (event) => {
+    const selectedShirtSize = event.target.value;
+    setShirtSize(selectedShirtSize);
+  };
+
+  const handleDressSizeChange = (event) => {
+    const selectedDressSize = event.target.value;
+    setDressSize(selectedDressSize);
+  };
+
+  return (
+    <div onChange={handleGenderChange}>
+      <h1>Select your gender</h1>
+      <input type="radio" value="Male" name="gender" /> Male
+        <input type="radio" value="Female" name="gender" /> Female
+
+      {gender === "Male" && (
+        <div>
+          <label>
+            Select Shirt Size:
+            <select value={shirtSize} onChange={handleShirtSizeChange}>
+              <option value="">Select</option>
+              <option value="Small">Small</option>
+              <option value="Medium">Medium</option>
+              <option value="Large">Large</option>
+            </select>
+          </label>
+        </div>
+      )}
+
+      {gender === "Female" && (
+        <div>
+          <label>
+            Select Dress Size:
+            <select value={dressSize} onChange={handleDressSizeChange}>
+              <option value="">Select</option>
+              <option value="2">2</option>
+              <option value="4">4</option>
+              <option value="6">6</option>
+              
+            </select>
+          </label>
+        </div>
+      )}
+
+      {/* You can also add additional fields for other gender options */}
+    </div>
+  );
+};
+
+export default App;
