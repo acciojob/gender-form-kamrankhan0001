@@ -1,6 +1,6 @@
 
 // import React from "react";
-// import './../styles/App.css';
+// 
 
 // const App = () => {
 //   return (
@@ -12,7 +12,7 @@
 
 // export default App
 import React, { useState } from "react";
- import './../styles/App.css';
+import './../styles/App.css';
 
 const App = () => {
   const [gender, setGender] = useState("");
@@ -36,16 +36,19 @@ const App = () => {
 
   return (
     <div onChange={handleGenderChange}>
-      <h2>Select your gender</h2>
-      <input type="radio" value="Male" name="gender" /> Male
-        <input type="radio" value="Female" name="gender" /> Female
-
+      <h1>Select your gender</h1>
+      
+      <input type="radio" value="Male" name="gender" /> 
+      <label> Male</label>
+      
+        <input type="radio" value="Female" name="gender" /> 
+              <label> Female</label>
       {gender === "Male" && (
         <div>
           <label>
             Select Shirt Size:
             <select value={shirtSize} onChange={handleShirtSizeChange}>
-              <option value="">Select</option>
+              <option value="">Select size</option>
               <option value="Small">Small</option>
               <option value="Medium">Medium</option>
               <option value="Large">Large</option>
@@ -59,7 +62,7 @@ const App = () => {
           <label>
             Select Dress Size:
             <select value={dressSize} onChange={handleDressSizeChange}>
-              <option value="">Select</option>
+              <option value="">Select size</option>
               <option value="2">2</option>
               <option value="4">4</option>
               <option value="6">6</option>
