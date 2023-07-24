@@ -45,22 +45,21 @@ const App = () => {
               <label> Female</label>
       {gender === "Male" && (
         <div>
-          <label>
-            Select Shirt Size:
+          <h1>Select your shirt Size:</h1>
+            
             <select value={shirtSize} onChange={handleShirtSizeChange}>
               <option value="">Select size</option>
               <option value="Small">Small</option>
               <option value="Medium">Medium</option>
               <option value="Large">Large</option>
             </select>
-          </label>
+          
         </div>
       )}
 
       {gender === "Female" && (
         <div>
-          <label>
-            Select Dress Size:
+           <h1>Select your dress Size:</h1>
             <select value={dressSize} onChange={handleDressSizeChange}>
               <option value="">Select size</option>
               <option value="2">2</option>
@@ -68,7 +67,7 @@ const App = () => {
               <option value="6">6</option>
               
             </select>
-          </label>
+        
         </div>
       )}
 
